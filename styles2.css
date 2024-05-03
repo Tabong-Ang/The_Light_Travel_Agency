@@ -218,7 +218,7 @@ marquee {
         display: flex;
         flex-direction: column;
         background-color: rgba(238, 211, 245, 0.548);
-        bottom: 140px;
+        bottom: 165px;
         padding: 12px 16px;
         color: var(--dark-blue);
     }
