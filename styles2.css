@@ -9,10 +9,13 @@
     --thick-blue: rgb(0, 51, 153);
 }
 
+html {
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
     background-color: var(--thick-blue);
   }
@@ -25,7 +28,6 @@ body {
     padding: 16px 10px;
     justify-content: flex-end;
     background-color: var(--dark-blue);
-    border-bottom: 1px solid var(--white);
 }
 
 .nav-link {
@@ -48,6 +50,7 @@ body {
     .world {
         list-style-type: none;
         margin: auto;
+        text-align: center;
     }
 }
 
@@ -58,17 +61,17 @@ body {
 .world {
     list-style-type: none;
     margin-right: auto;
+    color: var(--white);
 }
 
 .brand {
-    color: var(--white);
+    color: var(--white)
 }
 
 marquee {
   background-color: var(--dark-blue);
-  margin: 0 auto ;
-  border-color: 1px solid var(--main-lavender);
-  color: white;
+  margin: 0 auto -2px;
+  color: var(--main-lavender)
 }
 
 
@@ -78,15 +81,16 @@ marquee {
     background-color: var(--dark-blue);
     color: var(--white);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    padding: 10px 20px;
-    border-bottom: 1px solid var(--white);
-    margin: -4px 0 -20px;
+    padding: 10px 10px 10px 170px;
+    margin: -5px 0 0px;
+    position: static;
   }
   
   .logo {
     font-size: 1.5rem;
+    margin-right: auto;
   }
   
   .nav-list {
@@ -129,6 +133,7 @@ marquee {
   }
   
   @media (max-width: 768px) {
+
     .checkbtn {
       display: block;
       order: 1;
@@ -147,7 +152,7 @@ marquee {
       justify-content: center;
       align-items: center;
       transition: all 0.3s;
-      z-index: 2;
+      z-index: 4;
     }
   
     .list {
@@ -161,231 +166,144 @@ marquee {
     #check:checked ~ .nav-list {
       right: 0;
     }
+
+    .logo {
+      display: none;
+    }
   }
 
 
 
   /* slider image section */
+  
+ /* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: -24px auto;
+}
 
-  @keyframes slidy {
-    0% { left: 0%; }
-    20% { left: 0%; }
-    25% { left: -100%; }
-    45% { left: -100%; }
-    50% { left: -200%; }
-    70% { left: -200%; }
-    75% { left: -300%; }
-    95% { left: -300%; }
-    100% { left: -400%; }
-    }
-    
-    div#slider { overflow: hidden; }
-    div#slider .figure-1 .image-2 { width: 20%; float: left; }
-    div#slider .figure-1 { 
-      position: relative;
-      width: 500%;
-      margin: 0;
-      left: 0;
-      text-align: left;
-      font-size: 0;
-      animation: 30s slidy infinite; 
-    }
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  /* font-size: 17px;
+  font-weight: bold; */
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  text-align: center;
+  text-shadow: 2px 2px 5px black, 0 0 25px blue, 0 0 10px black;
+}
 
-    div.overlay-1 {
-      position: absolute;
-      bottom: 20px;
-      left: 12px;
-      background-color: var(--yellow) ;
-      padding: 32px 20px;
-      border-radius: 10px;
-      color: var(--thick-blue);
-      font-weight: 900;
-    }
+/* Number text (1/3 etc) */
+.numbertext {
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
 
-    .book-now {
-      border-radius: 10px;
-      background-color: var(--dark-blue);
-      border-color: var(--white);
-      padding: 12px 28px;
-      display: block;
-      margin-top: 12px;
-    }
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 
-    .book-1 {
-      color: var(--white);
-      text-decoration: none;
-    }
 
-    @media only screen and (max-width: 600px) {
-      div.overlay-1 {
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(238, 211, 245, 0.548);
-        bottom: 140px;
-        padding: 12px 16px;
-        color: var(--dark-blue);
-    }
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
 
-    .book-now {
-      border-radius: 10px;
-      background-color: var(--dark-blue);
-      border-color: var(--white);
-    }
+.top-img {
+  height: 400px;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+  /* Flight search section */
+
+  .flex-1 {
+    flex: 1;
   }
 
+  /* Flight search end */
 
-    /* main section */
 
-    div.destinations {
-        font-size: 32px;
-        margin: 32px auto 16px;
-        text-align: center;
-        font-family: Tahoma;
-        color: var(--white);
-    }
+  /* multiple image carousal start */
+  @media (max-width: 767px) {
+		.carousel-inner .carousel-item > div {
+			display: none;
+		}
+		.carousel-inner .carousel-item > div:first-child {
+			display: block;
+		}
+	}
 
-    div.pick {
-      font-size: 28px;
-      text-align: center;
-      color: var(--white);
-      margin-top: 10px;
-    }
+	.carousel-inner .carousel-item.active,
+	.carousel-inner .carousel-item-next,
+	.carousel-inner .carousel-item-prev {
+		display: flex;
+	}
+
+	/* medium and up screens */
+	@media (min-width: 768px) {
+
+		.carousel-inner .carousel-item-end.active,
+		.carousel-inner .carousel-item-next {
+			transform: translateX(25%);
+		}
+
+		.carousel-inner .carousel-item-start.active, 
+		.carousel-inner .carousel-item-prev {
+			transform: translateX(-25%);
+		}
+	}
+
+	.carousel-inner .carousel-item-end,
+	.carousel-inner .carousel-item-start { 
+		transform: translateX(0);
+	}
+ 
+
+  /* multiple image carousal end */
+
+
+  /* Testimonial start */
+  
+ 
+  /* testimonial end */
+
+  /* Book a ticket without leaving your home */
+  
+  .buy-ticket {
+    background-image: linear-gradient(rgba(2, 2, 53, 0.514) 5%, rgba(2, 2, 53, 0.514) 5%), url(Ticketing.jpg);
+    background-size: cover;
+    margin-bottom: 32px;
+  }
+
     
-    
-    div.container {
-        display: flex;
-        width: 100%;
-        justify-content:space-evenly;
-        gap: 8px;
-        flex-wrap: wrap;
-        margin: 32px 0 ;
-        background-color: var(--thick-blue);
-    }
-    
-    
-      .image {
-        width: 100%;
-        max-width: 400px;
-        border-radius: 10px;
-      }
-    
-      .image-container { 
-        position: relative;
-        max-width: 400px; 
-      } 
-       
-      .image-overlay { 
-        position: absolute; 
-        top: 0; 
-        left: 0; 
-        width: 100%; 
-        height: 100%; 
-        background-color: rgba(0, 0, 0, 0.5); 
-        opacity: 0; 
-        transition: opacity 0.5s ease-in; 
-        pointer-events: none; 
-        margin: auto;
-        border-radius: 10px;
-      } 
-       
-      .image-container:hover .image-overlay { 
-        opacity: 1; 
-        pointer-events: auto; 
-        border-radius: 10px;
-      } 
-       
-      .image-overlay p, h2, .book { 
-        color: var(--white); 
-        text-align: center; 
-        font-size: 20px; 
-        padding: 20px; 
-        text-decoration: none;
-      }
-    
-       h2 {
-        position: absolute;
-        bottom: 0;
-        font-size: xx-large;
-        text-shadow: 5px 5px 5px var(--dark-blue);
-      }
-    
-      .image-overlay button {
-        padding: 12px 20px;
-        background-color: var(--dark-blue);
-        margin: 0 25%;
-        border-radius: 10px;
-        border-color: var(--white);
-      }
-
-      @media only screen and (max-width: 600px) {
-        .image-overlay button {
-            margin: 0 20%;
-          }
-      }
-
-
-
-      .container-2 {
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      section {
-        width: 25%;
-        margin: 0 auto;
-      }
-
-      @media only screen and (max-width: 600px) {
-        section {
-          width: 100%;
-          margin: 0 auto;
-        }
-
-        .container-2 {
-          display: flex;
-          flex-direction: column;
-        }
-
-        .image-3 {
-          width: 100%;
-          max-width: 300px;
-          margin-right: auto;
-        }
-
-        .btn{
-          border-color: var(--white);
-          border-radius: 10px;
-        }
-      }
-
-      .btn{
-        padding: 12px 16px;
-        width: 30%;
-        margin: 0 auto;
-      }
-
-      .image-3 {
-        width: 100%;
-        max-width: 350px;
-        margin-right: auto;
-        border-radius: 10px 10px 0 0;
-      }
-
-      .article-1 {
-        /* display: flex;
-        flex-direction: column; */
-        margin: 0 auto;
-        padding: 4px 10px;
-        background-color: var(--white);
-        max-width: 350px;
-        border: 1px solid var(--thick-blue);
-      }
 
 
       /* footer section */
 
       footer {
-        height: 100vh;
         overflow: hidden;
         background-color: var(--dark-blue);
         display: flex;
@@ -431,5 +349,15 @@ marquee {
         width: 100%;
         max-width: 200px;
     }
+
+    .copyright {
+      display: block;
+      color: var(--white);
+      text-align: center;
+    }
+
+
+
+
 
       
