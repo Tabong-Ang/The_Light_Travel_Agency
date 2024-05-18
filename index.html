@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./styles2.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
     <script src="./script.js" defer></script>
-    <script src="./script2.js" defer></script>
 </head>
 <body>
   <div class="container-fluid-sm">
@@ -68,34 +67,124 @@
         </nav>
 
     <!-- slider images section -->
-          ..<div class="slideshow-container">
-
-            <div class="mySlides fade">
-              <div class="numbertext"><a href="">Designed by PTE Technologies</a></div>
-              <img class="top-img"  src="./Shangai.jpg" style="width:100%">
-              <h1 class="text">EXPLORE DIFFERENT DESTINATIONS</h1>
-            </div>
-            
-            <div class="mySlides fade">
-              <div class="numbertext"><a href="">Designed by PTE Technologies</a></div>
-              <img class="top-img"  src="./Ticketing.jpg" style="width:100%">
-              <h1 class="text">GET TICKETS FASTER AND AT CHEAPER RATES</h1>
-            </div>
-            
-            <div class="mySlides fade">
-              <div class="numbertext"><a href="">Designed by PTE Technologies</a></div>
-              <img class="top-img" src="./Visa_assistance.jpg" style="width:100%">
-              <h1 class="text">GET VISA ASSISTANCE TO SECURE YOUR DREAM VISA</h1>
-            </div>
-            
-            </div>
-            <br>
-            
-            <div style="text-align:center">
-              <span class="dot"></span> 
-              <span class="dot"></span> 
-              <span class="dot"></span> 
-            </div>
+          <div id="content-slider">
+            <div class="wrap-slider">	
+          
+              <!-- <h1 class="main-title">automatic slider css only</h1> -->
+          
+              <!-- ===== Thumbnail ControlNav ======= -->			
+              <input type="radio" id="a-1" name="a" >			
+              <input type="radio" id="a-2" name="a" >			
+              <input type="radio" id="a-3" name="a" >
+              <input type="radio" id="a-4" name="a" >
+          
+              <nav id="main">
+                <label for="a-1" class="first"></label>
+                <label for="a-2" class="first"></label>
+                <label for="a-3" class="first"></label>
+                <label for="a-4" class="first"></label>
+              </nav>
+          
+              <!-- =================================== -->	
+              <nav id="control">
+                <label for="a-1"></label>
+                <label for="a-2"></label>
+                <label for="a-3"></label>
+                <label for="a-4"></label>
+              </nav>
+              <!-- =================================== -->
+          
+              <!-- 	IMAGE NAVIGATION pic -->
+              <span id="b-1" class="th" tabindex="10">
+                <img src="./Shangai.jpg" alt="" id="p-1" height="100px">
+                <div class="title-1">
+                  <h1>EXPLORE</h1>
+                  <p>Different Countries</p>
+                  <a href="">read more...</a>
+                </div>
+              </span>
+          
+              <span id="b-2" class="th" tabindex="11">
+                <img src="./Ticketing.jpg" alt="" id="p-2">
+                <div class="title-2">
+                  <h1>FAST TICKETS</h1>
+                  <p>Book Tickets Faster and Cheaper</p>
+                  <a href="">read more...</a>
+                </div>
+              </span>			
+          
+              <span id="b-3" class="th" tabindex="12">
+                <img src="./Visa_assistance.jpg" alt="" id="p-3">
+                <div class="title-3">
+                  <h1>VISA ASSISTANCE</h1>
+                  <p> Secure Your Dream Visa</p> 
+                  <a href="">read more...</a>
+                </div>
+              </span>
+          
+              <span id="b-4" class="th" tabindex="13">
+                <img src="./Insurance.jpg" alt="" id="p-4">
+                <div class="title-4">
+                  <h1>INSURANCE</h1>
+                  <p>All Your Tickets are Insured</p>
+                  <a href="">read more...</a>
+                </div>
+              </span>
+          
+              <!-- ===== IMages ======= -->							
+          
+              <div class="slider">
+                <div class="inset">
+          
+                  <figure>
+                    <figcaption class="title-1">
+                      <h1>EXPLORE</h1>
+                      <p>Different Countries</p>
+                      <a class="btn btn-warning" href="">Book Now</a>
+                    </figcaption>
+                    <img src="./Shangai.jpg" alt="" id="i-1" class="f">						
+                  </figure>
+          
+                  <figure>
+                    <figcaption class="title-2">
+                      <h1>FAST TICKETS</h1>
+                      <p>Book Tickets Faster and Cheaper</p>
+                      <a class="btn btn-warning" href="">Book Now</a>
+                    </figcaption>
+                    <img src="./Ticketing.jpg" alt="" id="i-2" class="f">						
+                  </figure>
+          
+                  <figure>
+                    <figcaption class="title-3">
+                      <h1>VISA ASSISTANCE</h1>
+                      <p>Secure Your Dream Visa</p>
+                      <a class="btn btn-warning" href="">Book Now</a>
+                    </figcaption>
+                    <img src="./Visa_assistance.jpg" alt="" id="i-3" class="f">						
+                  </figure>
+          
+                  <figure>
+                    <figcaption class="title-4">
+                      <h1>INSURANCE</h1>
+                      <p>All your Tickets are Insured</p>
+                      <a href="">FIND OUT MORE</a>
+                    </figcaption>
+                    <img src="./Insurance.jpg" alt="" id="i-4" class="f">						
+                  </figure>
+          
+          
+                  <figure>
+                    <figcaption class="title-5">
+                      <h1>LEISURE TIME</h1>
+                      <p>Explore the Best Beaches around the world</p>
+                      <a class="btn btn-warning" href="">Book Now</a>
+                    </figcaption>
+                    <img src="./wouri_banks.jpg" alt="" id="i-5" class="f">						
+                  </figure>				
+                </div>
+              </div>					
+            </div>		
+          </div>
       
 
 
@@ -110,7 +199,7 @@
 
     <!-- Search bar -->
         
-            <div class="container-sm pt-3" id="book_flight">
+            <div class="container-sm pt-5" id="book_flight">
                   <div class="my-2 card">
                     <div class="card-body">
                       <h5 class="card-title">Locations</h5>
@@ -522,7 +611,7 @@
     
       <!-- Why you should use our services start     -->
     <div class="container-fluid mt-3">
-        <h3 class="text-center text-white pt-5">Why Should You Use Our Services</h3>
+        <h3 class="text-center text-white pt-5">Why Should You Use Our Services?</h3>
       <div class="row bg-warning">
         <div class="col-sm-6">
             <h5 class="pt-3 text-start ps-5">FLEXIBILITY</h5>
@@ -547,19 +636,40 @@
 
       <!-- Book a ticket without leaving your home -->
 
-    <div class="container-fluid mt-3">
-      <div class="buy-ticket">
-        <div class="row">
-          <div class="col">
+    <div class="container-fluid">
+        <div class="row buy-ticket">
+          <div class="col-4"></div>
+          <div class="col-4">
             <h4 class="text-center text-white display-4 pt-5">Book a Ticket</h4>
             <h4 class="text-center text-white pt-2">Without Leaving Your Home</h4>
-            <h5 class="text-center text-white pt-3 px-12">Using our website, you can easily find and book any ticket you want.</h5>
-            <h5 class="text-center text-white">Mobile users will definitely enjoy our app when it becomes available for all phone users</h5>
+            <h6 class="text-center text-white pt-3">Using our website, you can easily find and book any ticket you want.</h6>
+            <h6 class="text-center text-white">Mobile users will definitely enjoy our app when it becomes available for all phone users</h6>
             <div class="pt-4 text-center pb-5"><a  href="#book_flight" class="btn btn-warning active">Book Now</a></div>
           </div>
         </div>
-      </div>
     </div>
+
+    <!-- Book a ticket without leaving your home end -->
+
+    <div class="container-fluid">
+      <h3 class="text-center text-white pt-5">We Offer Our Best</h3>
+      <div class="row offer">
+        <div class="col-sm-3">
+          <h4 class="text-warning pt-5">Visa Assistance</h4>
+          <p class="text-justify text-white">Our trained visa experts provide customers with step-by-step assistance on preparing their visa application</p>
+          <h4 class="text-warning pt-5">Book Appointments</h4>
+          <p class="text-justify text-white">If you rely on client appointments, you know how much effort it takes to manage your calendar. Take the headache out of scheduling with our services</p>
+          <h4 class="text-warning pt-5">Hotel Reservation</h4>
+          <p class="text-justify text-white">We help you book hotels at best deals, flexible cancellation options and other benefits.</p>
+          <h4 class="text-warning pt-5">Admissions into Universities</h4>
+          <p class="text-justify text-white">Study in the heart of Europe's most popular city as an overseas students. Maximize your time, effort & money for greater career returns. Invest in your own career.</p>
+        </div>
+      </div>
+
+    </div>
+
+
+
 
    
 
